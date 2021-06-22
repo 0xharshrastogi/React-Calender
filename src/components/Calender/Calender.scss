@@ -1,0 +1,84 @@
+.calender-component {
+  --blue: #4fc3f7;
+  --blue-800: #303658;
+  --white: #fff;
+
+  background-color: var(--blue-800);
+  color: var(--white);
+
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    button {
+      font-size: 2.5rem;
+      color: #fff;
+      height: 2.5rem;
+      width: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #40476f;
+      }
+    }
+    span {
+      font-size: 2rem;
+      text-transform: capitalize;
+      font-weight: 700;
+      flex: 1;
+      text-align: center;
+      margin: 0 1.5rem;
+    }
+  }
+
+  > * + * {
+    margin-top: 0.5rem;
+  }
+
+  .weeks ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    li {
+      padding: 0.5rem;
+      text-align: center;
+      font-weight: 600;
+      + li {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .days ul {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 50px);
+
+    li {
+      border-radius: 10rem;
+      width: 50px;
+      margin: 0 auto;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+
+      &:not(.days-empty) {
+        &:hover {
+          --color: #40476f;
+          background-color: var(--color);
+        }
+      }
+    }
+  }
+}
