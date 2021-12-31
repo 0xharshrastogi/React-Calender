@@ -11,7 +11,7 @@ const getMonthName = (monthCount) => {
     'march',
     'april',
     'may',
-    'june',
+    'Sawan',
     'july',
     'august',
     'september',
