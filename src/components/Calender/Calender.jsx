@@ -11,12 +11,11 @@ const getMonthName = (monthCount) => {
     'march',
     'april',
     'may',
-    'Sawan',
+    'June',
     'july',
     'august',
     'september',
-    'october',
-    'november',
+    'jan',
     'december',
   ];
   return month[monthCount];
